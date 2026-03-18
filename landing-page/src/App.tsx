@@ -38,12 +38,9 @@ function Navbar() {
         </div>
         <span className="text-xl font-bold tracking-tight text-white">LeadHunter</span>
       </div>
-      <div className="flex items-center gap-6">
-        <a href="/login" className="text-textMuted hover:text-white transition-colors text-sm font-medium">Log In</a>
-        <a href="/signup" className="px-5 py-2 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white text-sm font-medium transition-all hover:glow">
-          Sign Up
-        </a>
-      </div>
+      <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white text-sm font-semibold transition-all hover:scale-105 shadow-[0_0_20px_rgba(108,99,255,0.3)]">
+        Try Demo
+      </a>
     </nav>
   );
 }
@@ -68,11 +65,8 @@ function Hero() {
           LeadHunter scans online conversations, communities and forums to find people actively looking for products like yours.
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-          <a href="/signup" className="px-8 py-4 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-semibold flex items-center gap-2 hover:scale-105 transition-transform shadow-[0_0_30px_rgba(108,99,255,0.4)]">
-            Start Finding Leads <ArrowRight className="w-4 h-4" />
-          </a>
-          <a href="/login" className="px-8 py-4 rounded-full bg-white/5 hover:bg-white/10 border border-white/10 text-white font-medium transition-colors">
-            Log In
+          <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-semibold flex items-center gap-2 hover:scale-105 transition-transform shadow-[0_0_30px_rgba(108,99,255,0.4)]">
+            Try Demo <ArrowRight className="w-4 h-4" />
           </a>
         </div>
       </div>
@@ -356,8 +350,8 @@ function DemoLead() {
         </div>
 
         <div className="text-center pt-4">
-          <a href="/signup" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-white/5 border border-white/10 text-white font-medium hover:bg-white/10 hover:border-white/20 transition-all hover:scale-105">
-            View Leads in Dashboard <ArrowRight className="w-4 h-4"/>
+          <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-semibold hover:scale-105 transition-all shadow-[0_0_20px_rgba(108,99,255,0.3)]">
+            Try Demo <ArrowRight className="w-4 h-4"/>
           </a>
         </div>
       </div>
@@ -374,12 +368,9 @@ function FinalCTA() {
           Stop guessing where your <br className="hidden md:block"/> customers are.
         </h2>
         <div className="flex flex-col items-center gap-6">
-          <a href="/signup" className="px-10 py-5 rounded-full bg-white text-black font-bold text-lg hover:bg-gray-200 transition-colors shadow-[0_0_40px_rgba(255,255,255,0.3)] hover:scale-105">
-            Start Using LeadHunter
+          <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="px-10 py-5 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_40px_rgba(108,99,255,0.4)]">
+            Try Demo — It's Free
           </a>
-          <p className="text-textMuted flex gap-2">
-            Already have an account? <a href="/login" className="text-white font-medium hover:text-accent2 transition-colors">Log in</a>
-          </p>
         </div>
       </Section>
     </div>
@@ -395,8 +386,7 @@ function Footer() {
           <span className="text-lg font-bold text-white tracking-tight">LeadHunter</span>
         </div>
         <div className="flex gap-8 text-sm font-medium">
-          <a href="/login" className="text-textMuted hover:text-white transition-colors">Login</a>
-          <a href="/signup" className="text-textMuted hover:text-white transition-colors">Sign Up</a>
+          <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="text-textMuted hover:text-white transition-colors">Try Demo</a>
           <a href="https://github.com" target="_blank" rel="noreferrer" className="text-textMuted hover:text-white transition-colors">GitHub</a>
         </div>
       </div>
