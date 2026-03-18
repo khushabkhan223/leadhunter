@@ -38,7 +38,7 @@ function Navbar() {
         </div>
         <span className="text-xl font-bold tracking-tight text-white">LeadHunter</span>
       </div>
-      <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white text-sm font-semibold transition-all hover:scale-105 shadow-[0_0_20px_rgba(108,99,255,0.3)]">
+      <a href="https://leadhunter-fe.vercel.app/" target="_blank" rel="noopener noreferrer" className="px-5 py-2 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white text-sm font-semibold transition-all hover:scale-105 shadow-[0_0_20px_rgba(108,99,255,0.3)]">
         Try Demo
       </a>
     </nav>
@@ -65,7 +65,7 @@ function Hero() {
           LeadHunter scans online conversations, communities and forums to find people actively looking for products like yours.
         </p>
         <div className="flex flex-col sm:flex-row items-center gap-4 justify-center lg:justify-start">
-          <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-semibold flex items-center gap-2 hover:scale-105 transition-transform shadow-[0_0_30px_rgba(108,99,255,0.4)]">
+          <a href="https://leadhunter-fe.vercel.app/" target="_blank" rel="noopener noreferrer" className="px-8 py-4 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-semibold flex items-center gap-2 hover:scale-105 transition-transform shadow-[0_0_30px_rgba(108,99,255,0.4)]">
             Try Demo <ArrowRight className="w-4 h-4" />
           </a>
         </div>
@@ -350,7 +350,7 @@ function DemoLead() {
         </div>
 
         <div className="text-center pt-4">
-          <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-semibold hover:scale-105 transition-all shadow-[0_0_20px_rgba(108,99,255,0.3)]">
+          <a href="https://leadhunter-fe.vercel.app/" target="_blank" rel="noopener noreferrer" className="inline-flex items-center gap-2 px-8 py-3 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-semibold hover:scale-105 transition-all shadow-[0_0_20px_rgba(108,99,255,0.3)]">
             Try Demo <ArrowRight className="w-4 h-4"/>
           </a>
         </div>
@@ -368,7 +368,7 @@ function FinalCTA() {
           Stop guessing where your <br className="hidden md:block"/> customers are.
         </h2>
         <div className="flex flex-col items-center gap-6">
-          <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="px-10 py-5 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_40px_rgba(108,99,255,0.4)]">
+          <a href="https://leadhunter-fe.vercel.app/" target="_blank" rel="noopener noreferrer" className="px-10 py-5 rounded-full bg-gradient-to-r from-accent1 to-accent2 text-white font-bold text-lg hover:scale-105 transition-transform shadow-[0_0_40px_rgba(108,99,255,0.4)]">
             Try Demo — It's Free
           </a>
         </div>
@@ -386,7 +386,7 @@ function Footer() {
           <span className="text-lg font-bold text-white tracking-tight">LeadHunter</span>
         </div>
         <div className="flex gap-8 text-sm font-medium">
-          <a href="https://leadhunter1.onrender.com" target="_blank" rel="noopener noreferrer" className="text-textMuted hover:text-white transition-colors">Try Demo</a>
+          <a href="https://leadhunter-fe.vercel.app/" target="_blank" rel="noopener noreferrer" className="text-textMuted hover:text-white transition-colors">Try Demo</a>
           <a href="https://github.com" target="_blank" rel="noreferrer" className="text-textMuted hover:text-white transition-colors">GitHub</a>
         </div>
       </div>
