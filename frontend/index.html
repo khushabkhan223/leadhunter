@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LeadHunter — Intent Discovery Assistant</title>
+    <meta name="description"
+        content="Find people frustrated with your competitor and generate contextual outreach messages using AI.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+
+<body>
+
+    <!-- ── Background Effects ── -->
+    <div class="bg-grid"></div>
+    <div class="bg-glow bg-glow--1"></div>
+    <div class="bg-glow bg-glow--2"></div>
+
+    <!-- ── Header ── -->
+    <header class="header">
+        <div class="header__logo">
+            <div class="header__icon">
+                <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                    stroke-linecap="round" stroke-linejoin="round">
+                    <circle cx="11" cy="11" r="8" />
+                    <path d="m21 21-4.3-4.3" />
+                    <path d="M11 8v6" />
+                    <path d="M8 11h6" />
+                </svg>
+            </div>
+            <h1 class="header__title">LeadHunter</h1>
+        </div>
+        <p class="header__tagline">Intent Discovery Assistant</p>
+    </header>
+
+    <!-- ── Main Content ── -->
+    <main class="main">
+
+        <!-- Input Form -->
+        <section class="input-section" id="inputSection">
+            <div class="card card--glass">
+                <h2 class="card__title">
+                    <span class="card__title-icon">🎯</span>
+                    Define Your Hunt
+                </h2>
+                <p class="card__subtitle">Tell us about your product and who you're competing against</p>
+
+                <form id="huntForm" class="form">
+                    <div class="form__group">
+                        <label class="form__label" for="productName">Your Product Name</label>
+                        <input class="form__input" type="text" id="productName" name="product_name"
+                            placeholder="e.g. Linear, Notion, Figma" required maxlength="120">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="competitorName">Competitor Name</label>
+                        <input class="form__input" type="text" id="competitorName" name="competitor_name"
+                            placeholder="e.g. Jira, Confluence, Sketch" required maxlength="120">
+                    </div>
+
+                    <div class="form__group">
+                        <label class="form__label" for="productDescription">What does your product do?</label>
+                        <textarea class="form__textarea" id="productDescription" name="product_description"
+                            placeholder="Briefly describe what your product does and why it's better for frustrated users..."
+                            required minlength="10" maxlength="1000" rows="3"></textarea>
+                        <span class="form__char-count"><span id="charCount">0</span>/1000</span>
+                    </div>
+
+                    <button class="btn btn--primary" type="submit" id="submitBtn">
+                        <span class="btn__text" id="btnText">Start Hunting</span>
+                        <span class="btn__loader" id="btnLoader" style="display:none">
+                            <span class="spinner"></span>
+                            Running Pipeline...
+                        </span>
+                        <svg class="btn__arrow" id="btnArrow" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                            stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                        </svg>
+                    </button>
+
+                </form>
+            </div>
+        </section>
+
+        <!-- Pipeline Progress -->
+        <section class="pipeline-section" id="pipelineSection" hidden>
+            <div class="card card--glass">
+                <h2 class="card__title">
+                    <span class="card__title-icon">⚡</span>
+                    Pipeline Progress
+                </h2>
+
+                <div class="pipeline" id="pipeline">
+                    <div class="pipeline__stage" data-stage="1">
+                        <div class="pipeline__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <circle cx="11" cy="11" r="8" />
+                                <path d="m21 21-4.3-4.3" />
+                            </svg>
+                        </div>
+                        <div class="pipeline__info">
+                            <span class="pipeline__name">Generating Search Queries</span>
+                            <span class="pipeline__status" id="stage1Status">Waiting...</span>
+                        </div>
+                        <div class="pipeline__indicator"></div>
+                    </div>
+
+                    <div class="pipeline__connector"></div>
+
+                    <div class="pipeline__stage" data-stage="2">
+                        <div class="pipeline__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M12 2L2 7l10 5 10-5-10-5z" />
+                                <path d="M2 17l10 5 10-5" />
+                                <path d="M2 12l10 5 10-5" />
+                            </svg>
+                        </div>
+                        <div class="pipeline__info">
+                            <span class="pipeline__name">Discovering Discussions</span>
+                            <span class="pipeline__status" id="stage2Status">Waiting...</span>
+                        </div>
+                        <div class="pipeline__indicator"></div>
+                    </div>
+
+                    <div class="pipeline__connector"></div>
+
+                    <div class="pipeline__stage" data-stage="3">
+                        <div class="pipeline__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M22 3H2l8 9.46V19l4 2v-8.54L22 3z" />
+                            </svg>
+                        </div>
+                        <div class="pipeline__info">
+                            <span class="pipeline__name">Filtering High-Intent Leads</span>
+                            <span class="pipeline__status" id="stage3Status">Waiting...</span>
+                        </div>
+                        <div class="pipeline__indicator"></div>
+                    </div>
+
+                    <div class="pipeline__connector"></div>
+
+                    <div class="pipeline__stage" data-stage="4">
+                        <div class="pipeline__icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2">
+                                <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z" />
+                                <polyline points="14 2 14 8 20 8" />
+                                <line x1="16" y1="13" x2="8" y2="13" />
+                                <line x1="16" y1="17" x2="8" y2="17" />
+                            </svg>
+                        </div>
+                        <div class="pipeline__info">
+                            <span class="pipeline__name">Enriching & Drafting</span>
+                            <span class="pipeline__status" id="stage4Status">Waiting...</span>
+                        </div>
+                        <div class="pipeline__indicator"></div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Results -->
+        <section class="results-section" id="resultsSection" hidden>
+            <div class="results-header">
+                <h2 class="results-header__title">
+                    <span class="card__title-icon">🏆</span>
+                    Discovered Leads
+                </h2>
+                <span class="results-header__count" id="leadsCount">0 leads</span>
+            </div>
+            <div class="leads-grid" id="leadsGrid">
+                <!-- Lead cards injected by JS -->
+            </div>
+        </section>
+
+        <!-- Error -->
+        <section class="error-section" id="errorSection" hidden>
+            <div class="card card--glass card--error">
+                <h2 class="card__title">
+                    <span class="card__title-icon">⚠️</span>
+                    Something went wrong
+                </h2>
+                <p class="error-message" id="errorMessage"></p>
+                <button class="btn btn--secondary" id="retryBtn">Try Again</button>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- ── Footer ── -->
+    <footer class="footer">
+        <p>Quality over quantity — real conversations worth joining</p>
+    </footer>
+
+    <script src="/static/app.js"></script>
+</body>
+
+</html>
