@@ -8,6 +8,7 @@ from pathlib import Path
 from fastapi import FastAPI, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse, StreamingResponse
+from fastapi.middleware.cors import CORSMiddleware
 
 from .config import validate_keys
 from .models import HuntRequest
@@ -19,6 +20,15 @@ app = FastAPI(
     title="LeadHunter",
     description="Intent Discovery Assistant — Find frustrated competitor users",
     version="1.0.0",
+)
+
+# ── CORS ─────────────────────────────────────────────────────────────
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
 
 # Paths
