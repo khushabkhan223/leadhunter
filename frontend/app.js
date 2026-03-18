@@ -22,6 +22,9 @@ const leadsCount = document.getElementById('leadsCount');
 const errorMessage = document.getElementById('errorMessage');
 const retryBtn = document.getElementById('retryBtn');
 
+// ── Config ──────────────────────────────────────────────────────────
+const API_URL = "https://leadhunter1.onrender.com";
+
 // ── State ───────────────────────────────────────────────────────────
 let isRunning = false;
 let finalLeads = [];
@@ -103,7 +106,7 @@ function resetPipeline() {
 // ── SSE Streaming ───────────────────────────────────────────────────
 async function streamPipeline(formData) {
     try {
-        const response = await fetch('/hunt', {
+        const response = await fetch(`${API_URL}/hunt`, {
             method: 'POST',
             headers: { 'Content-Type': 'application/json' },
             body: JSON.stringify(formData),
